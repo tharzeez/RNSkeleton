@@ -4,11 +4,12 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 export default class ScreenTwo extends React.Component {
   static navigationOptions = ({ navigation, screenProps }) => ({
     headerLeft: (
-        <TouchableOpacity style={{ height: 44, width: 44, backgroundColor: '#986709' }}>
-          <Text>th</Text>
+        <TouchableOpacity style={{ height: 44, width: 44, backgroundColor: '#986709' }} onPress ={() => {
+          navigation.openDrawer();
+        }}>
         </TouchableOpacity>
     ),
-    title: 'Hello Two'
+    title: 'Hello from Two'
   });
 
   render() {

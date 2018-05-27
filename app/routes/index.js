@@ -3,9 +3,17 @@ import ScreenOne from '../components/home-dashboard/screen-one';
 import ScreenTwo from '../components/home-dashboard/screen-two';
 import Splash from '../components/splash/splash';
 
+const ScreenOnenavigator = createStackNavigator({
+  screenOne: ScreenOne,
+})
+
+const ScreenTwonavigator = createStackNavigator({
+  screenOne: ScreenTwo,
+})
+
 export const HomeDrawer = createDrawerNavigator({
-  ScreenOne: ScreenOne,
-  ScreenTwo: ScreenTwo
+  ScreenOne: ScreenOnenavigator,
+  ScreenTwo: ScreenTwonavigator
 }, {
   drawerOpenRoute: 'DrawerOpen',
   drawerCloseRoute: 'DrawerClose',
@@ -14,10 +22,10 @@ export const HomeDrawer = createDrawerNavigator({
 });
 
 export const RootNavigator = createStackNavigator({
-  // Splash: Splash,
+  Splash: Splash,
   Home: HomeDrawer
 },{
   navigationOptions: {
-    // header: null
+    header: null
   }
 });

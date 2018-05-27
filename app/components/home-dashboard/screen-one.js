@@ -5,13 +5,9 @@ export default class ScreenOne extends React.Component {
 
   static navigationOptions = ({ navigation, screenProps }) => ({
     headerLeft: (
-        <TouchableOpacity style={{ height: 44, width: 44, backgroundColor: '#986709' }}>
-          <Text>th</Text>
-        </TouchableOpacity>
-    ),
-    headerRight: (
-        <TouchableOpacity style={{ height: 44, width: 44, backgroundColor: '#986709' }}>
-          <Text>th</Text>
+        <TouchableOpacity style={{ height: 44, width: 44, backgroundColor: '#986709' }} onPress ={() => {
+          navigation.openDrawer();
+        }}>
         </TouchableOpacity>
     ),
     title: 'Hello'
